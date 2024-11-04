@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contacto.css">
+    <!-- Autor: Romina Garcia Donati -->
+</head>
+<body id="top">
+
+    <!-- Encabezado con logo centrado y navegación debajo -->
+    <header class="header">
+        <div class="header-logo">
+            <a href="./index.html"><img src="images/logo-tienda.png" alt="Logo" class="logo"></a>
+        </div>
+        
+        <nav class="header-nav">
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./productos.html">Productos</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        
+        <div class="header-icons">
+            <i class="fas fa-user"></i>
+            <i class="fas fa-shopping-cart"></i>
+        </div>
+    </header>
+    <!-- Hero para bienvenida | Aquí hay background del estilo parallax -->
+<section id="hero-contacto" class="hero">
+    <div class="hero-content">
+        <h1>Contacto</h1>
+        <p>Ponte en contacto mediante formulario</p>
+    </div>
+</section>
+    <!-- Contenido principal -->
+     
+    <main class="contacto">
+
+        <div class="contacto-contenido">
+            <!-- Columna del formulario -->
+            <section class="formulario">
+                <h2>Formulario de Contacto</h2>
+                <form action="https://formsubmit.co/rgarcia@live.com.ar" method="POST">
+                    <div class="form-group">
+                        <label for="nombre">Nombre y Apellido:</label>
+                        <input type="text" id="nombre" name="nombre" required pattern="[a-zA-Z\s]+" placeholder="Nombre y Apellido">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono" required placeholder="Teléfono">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required placeholder="Email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="motivo">Motivo de Contacto:</label>
+                        <select id="motivo" name="motivo" required>
+                            <option value="" disabled selected>Seleccione el motivo</option>
+                            <option value="Consulta Simple">Consulta</option>
+                            <option value="Quiero ser Mayorista">Venta Mayoristas</option>
+                            <option value="Tengo un problema con mi compra">Problema con Compra</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Escribe tu mensaje aquí..."></textarea>
+                    </div>
+<input type="hidden" name="_next" value=".gracias.html">
+                    <button type="submit">Enviar</button>
+                </form>
+            </section>
+            
+            <!-- Columna de vías de contacto -->
+            <section class="vias-contacto">
+                <h2>Vías de Contacto</h2>
+                <div class="grid-contacto">
+                    <div class="contacto-item">
+                        <i class="fas fa-phone"></i>
+                        <p><span>Telefono:</span><br>
+                            <a href="https://wa.link/jsq0yv" target="_blank" rel="noopener">+54 911 5497-7026<br>
+                            </a>
+                        </p>
+                    </div>
+                    <div class="contacto-item">
+                        <i class="fas fa-envelope"></i>
+                        <p><span>Email:</span><br>
+                            <a href="mailto:rgarcia@live.com.ar" target="_blank" rel="noopener">rgarcia@live.com.ar<br>
+                            </a>
+                        </p>
+                    </div>
+                    <div class="contacto-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p><span>Local:</span> <br>
+                            Pres. Hipólito Yrigoyen 2074, Florida, Provincia de Buenos Aires</p>
+                    </div>
+                    <div class="contacto-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p><span>Local:</span> <br>
+                            Paraná 2730, Olivos, Provincia de Buenos Aires</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- Pie de página -->
+    <footer>
+        <div class="footer-col">
+            <img class="footer-logo" src="images/logo-tienda.png" alt="Tienda">
+            <h2>PetShop</h2>
+            <!-- Iconos de redes sociales -->
+            <div class="social-icons">
+                <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h3>Dirección y Horario</h3>
+            <p>Pres. Hipólito Yrigoyen 2074, Florida, Provincia de Buenos Aires</p>
+            <p>Paraná 2730, Olivos, Provincia de Buenos Aires</p>
+            <p>Lunes a Viernes: 9:00 - 18:00</p>
+        </div>
+        <div class="footer-col">
+            <h3>Enlaces</h3>
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./productos.html">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+        
+    </footer>
+    <!-- Botón de Scroll to Top. Por ahora únicamente con css. -->
+    <a href="#top" class="scroll-to-top" aria-label="Volver al inicio">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</body>
+</html>

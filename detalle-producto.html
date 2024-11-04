@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Producto</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/detalleproducto.css">
+    <!-- Autor: Romina Garcia Donati -->
+</head>
+<body id="top">
+
+    <!-- Encabezado con logo centrado y navegación debajo -->
+    <header class="header">
+        <div class="header-logo">
+            <a href="./index.html"><img src="images/logo-tienda.png" alt="Logo" class="logo"></a>
+        </div>
+        
+        <nav class="header-nav">
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./productos.html">Productos</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        
+        <div class="header-icons">
+            <i class="fas fa-user"></i>
+            <i class="fas fa-shopping-cart"></i>
+        </div>
+    </header>
+    
+    <!-- Contenido principal -->
+    <main class="detalle-producto">
+        <!-- Fila principal -->
+        <div class="producto-main">
+            <!-- Columna izquierda: Slider de imágenes -->
+            <div class="producto-slider">
+                <div class="imagen-principal">
+                    <img src="images/prod/alimentos/royalcanin/rc-pouch-urinary-cat.jpg" alt="Royal Canin Pouch Urinary">
+                    <div class="descuento">-10%</div>
+                </div>
+            </div>
+    
+            <!-- Columna derecha: Información del producto -->
+            <div class="product-info">
+                <!-- Breadcrumb -->
+                <div class="breadcrumb">
+                  <a href="./index.html">Inicio</a> &gt; 
+                  <a href="#">Gatos</a> &gt; 
+                  <a href="#">Alimentos húmedos</a> &gt; 
+                  <span>Royal Canin Pouch Urinary S/O - 85 Gr</span>
+                </div>
+              
+                <!-- Título y Precio -->
+                <h1>Royal Canin Pouch Urinary S/O - 85 Gr</h1>
+                <div class="precio">
+                    <p class="precio-anterior">$2.730,00</p>
+                    <p class="precio-nuevo">$2.457,00</p>
+                </div>
+              
+                <!-- Mensaje de pago -->
+                <p>Paga con MercadoPago en <strong>Hasta 2 Cuotas Sin Interés</strong> con todos los Bancos</p>
+              
+                <!-- Disponibilidad -->
+                <div class="availability">
+                  <span class="in-stock">✔ Hay existencias</span>
+                </div>
+              
+                <!-- Selector de cantidad y botón de agregar al carrito -->
+                <div class="quantity-selector">
+                  <label for="quantity">Cantidad:</label>
+                  <button class="quantity-btn">-</button>
+                  <input type="number" id="quantity" value="1" min="1">
+                  <button class="quantity-btn">+</button>
+                </div>
+                <button class="btn-comprar">Añadir Al Carrito</button>
+              
+                <!-- Información adicional -->
+                <div class="extra-info">
+                  <div class="sku">SKU: 10563</div>
+                  <div class="categories">Categorías: Alimentos húmedos, Descuentos, Gatos, Oferta Pouch Royal Canin, Ofertas</div>
+                </div>
+              </div>
+        </div>
+        <div class="producto-detalle">
+            <div class="accordion">
+                <!-- Descripción del Producto -->
+                <div class="accordion-item">
+                <input type="radio" id="tab1" name="accordion" checked>
+                <label for="tab1">Descripción del Producto</label>
+                <div class="content">
+                    <h2>ROYAL CANIN POUCH URINARY S/O 85 Gr</h2>
+                    <p>Alimento húmedo para gatos adultos, formulado para ayudar a disolver cálculos de estruvita y contribuir a reducir su recurrencia a través de sus propiedades acidificantes de la orina.</p>
+                    <h3>Cistitis idiopática</h3>
+                    <p>Su alto contenido de humedad contribuye a la dilución de la orina, razón por la cual la dieta húmeda es de preferencia en casos de cistitis idiopática.</p>
+                    <h3>Disolución de estruvita</h3>
+                    <p>Ayuda a disolver los cálculos de estruvita.</p>
+                    <h3>Dilución urinaria</h3>
+                    <p>Ayuda a generar una orina más diluida que resulta desfavorable para la formación de cálculos urinarios. Además, un mayor volumen urinario genera un efecto de "lavado" de la vejiga.</p>
+                </div>
+                </div>
+            
+                <!-- Video de YouTube -->
+                <div class="accordion-item">
+                <input type="radio" id="tab2" name="accordion">
+                <label for="tab2">Video</label>
+                <div class="content">
+                    <iframe width="80%" height="500px" src="https://www.youtube.com/embed/wNgls6UltWg?si=ef0QfqhLHcHAK43M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                </div>
+            
+                <!-- Reseñas -->
+                <div class="accordion-item">
+                <input type="radio" id="tab3" name="accordion">
+                <label for="tab3">Reseñas</label>
+                <div class="content">
+                    <h2>Opiniones destacadas</h2>
+                    <div class="reviews-grid">
+                    <div class="review">
+                        <div class="valoracion">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <blockquote>"Excelente producto, cumple con lo esperado."</blockquote>
+                        <p class="fecha">15/10/2023</p>
+                    </div>
+                    <div class="review">
+                        <div class="valoracion">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <blockquote>Muy buen producto, aunque un poco caro.</blockquote>
+                        <p class="fecha">29/10/2024</p>
+                    </div>
+                    <div class="review">
+                        <div class="valoracion">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <blockquote>A mi gato no le gustó mucho, pero parece efectivo.</blockquote>
+                        <p class="fecha">15/10/2024</p>
+                    </div>
+                    <!-- Agrega más reseñas aquí -->
+                    <div class="review">
+                        <div class="valoracion">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <blockquote>Es efectivo, pero debería venir en un envase más grande.</blockquote>
+                        <p class="fecha">12/10/2024</p>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>    
+</section>
+            </div>
+          </div>
+    </main>
+    <!-- Pie de página -->
+    <footer>
+        <div class="footer-col">
+            <img class="footer-logo" src="images/logo-tienda.png" alt="Tienda">
+            <h2>PetShop</h2>
+            <!-- Iconos de redes sociales -->
+            <div class="social-icons">
+                <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h3>Dirección y Horario</h3>
+            <p>Pres. Hipólito Yrigoyen 2074, Florida, Provincia de Buenos Aires</p>
+            <p>Paraná 2730, Olivos, Provincia de Buenos Aires</p>
+            <p>Lunes a Viernes: 9:00 - 18:00</p>
+        </div>
+        <div class="footer-col">
+            <h3>Enlaces</h3>
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./productos.html">Productos</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+        
+    </footer>
+    <!-- Botón de Scroll to Top. Por ahora únicamente con css. -->
+    <a href="#top" class="scroll-to-top" aria-label="Volver al inicio">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</body>
+</html>

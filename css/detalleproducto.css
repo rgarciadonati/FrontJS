@@ -1,0 +1,252 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    color: #333;
+}
+
+/* Estilos de la vista de producto */
+.detalle-producto {
+    padding: 2rem;
+}
+.producto-main {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: -40px;
+    padding-top: 40px;
+    min-height: 50vh;
+    background-color: var(--wd-main-bgcolor);
+
+
+}
+.producto-detalle {
+    flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.producto-slider {
+    flex: 1;
+    max-width: 50%;
+}
+
+.imagen-principal {
+    position: relative;
+}
+
+.imagen-principal img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* preguntar si mas adelante con js podemos hacer un carrousel de imagenes */
+.miniaturas {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.miniaturas img {
+    width: 80px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+/* Estilos para la columna de info de prod */
+.breadcrumb {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .breadcrumb a {
+    color: #6B4EE2;
+    text-decoration: none;
+  }
+.product-info {
+    width: 45%px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+.producto-info h2 {
+    font-size: 1.8rem;
+    color: #6B4EE2;
+}
+
+.marca {
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.valoracion {
+    color: #ED1D90;
+    margin: 1rem 0;
+}
+
+.btn-comprar {
+    background-color: #ED1D90;
+    color: #FFFFFF;
+    padding: 0.7rem 1.2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-comprar:hover {
+    background-color: #6B4EE2;
+}
+/* Estilo del acordeón */
+
+.accordion {
+    margin: 20px auto;
+  }
+  
+  .accordion-item {
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .accordion-item input[type="radio"] {
+    display: none;
+  }
+  
+  .accordion-item label {
+    display: block;
+    padding: 15px;
+    background-color: #ED1D90;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .accordion-item .content {
+    display: none;
+    padding: 15px;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  .accordion-item input[type="radio"]:checked ~ .content {
+    display: block;
+  }
+/* Descripción detallada */
+.descripcion {
+    margin-top: 2rem;
+}
+
+.descripcion h3 {
+    font-size: 1.6rem;
+    color: #6B4EE2;
+}
+
+.descripcion p {
+    margin-top: 0.5rem;
+    line-height: 1.6;
+}
+
+/* Reseñas */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .review {
+    background-color: #FFF;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .review p {
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .review span {
+    font-size: 0.9rem;
+    color: #888;
+  }
+
+.valoracion {
+    color: #ED1D90;
+    margin-bottom: 0.5rem;
+}
+
+blockquote {
+    font-style: italic;
+    color: #333;
+    margin: 0.5rem 0;
+}
+
+.fecha {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Query para los grid */
+@media (min-width: 600px) {
+    .reviews-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+}
+
+@media (min-width: 900px) {
+    .reviews-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+}
+.availability {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  
+.in-stock {
+    color: #28a745;
+    font-weight: bold;
+  }
+  /* Estilo del selector de cantidad */
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 10px 0;
+  }
+  
+.quantity-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+  }
+  
+#quantity {
+    width: 50px;
+    text-align: center;
+    font-size: 16px;
+  }
+.extra-info {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+@media (max-width: 768px) {
+    .producto-main {
+        flex-direction: column;
+    }
+    .producto-slider, .producto-info {
+        max-width: 100%;
+    }
+}
