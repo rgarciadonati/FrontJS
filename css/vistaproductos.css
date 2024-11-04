@@ -1,0 +1,97 @@
+/* Layout de productos con filtros y cards */
+.productos-layout {
+    display: flex;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+/* Columna de filtros. Una vez que podamos agregar JS seria genial si se puede achicar*/ 
+.filtros {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+    max-width: 250px;
+}
+
+.filtros h2 {
+    font-size: 1.5rem;
+    color: #6B4EE2;
+}
+
+.filtro-categoria h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #ED1D90;
+    text-align: left;
+}
+
+.filtro-categoria label {
+    font-size: 1rem;
+    display: block;
+    margin: 0.2rem 0;
+    color: #000;
+    text-align: left;
+}
+
+/* Columna de productos */
+.producto-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    flex: 3;
+}
+
+.producto-card {
+    background-color: #FFFFFF;
+    color: #6B4EE2;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    width: calc(25% - 1rem); /* 4 cards por fila */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.producto-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.producto-card h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.producto-card p {
+    font-size: 1rem;
+    color: #ED1D90;
+}
+
+.producto-card button {
+    background-color: #ED1D90;
+    color: #FFFFFF;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.producto-card button:hover {
+    background-color: #6B4EE2;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .productos-layout {
+        flex-direction: column;
+    }
+
+    .producto-card {
+        width: 100%;
+    }
+    /* voy a ocultar los filtros porque al no poder achicarlo me alarga mucho la vista */
+    .filtros {
+        display: none;
+    }
+}

@@ -1,0 +1,114 @@
+/* Contenedor de contacto */
+.contacto {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contacto-contenido {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.formulario, .vias-contacto {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Estilos del formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select,
+textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    padding: 0.75rem;
+    background-color: #ED1D90;
+    color: #FFFFFF;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #6B4EE2;
+}
+
+/* Estilos de la columna de vías de contacto */
+.vias-contacto {
+    text-align: left;
+}
+
+.grid-contacto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.contacto-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contacto-item i {
+    color: #6B4EE2;
+    font-size: 1.5rem;
+}
+
+.contacto-item p {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+}
+.contacto-item span {
+    font-weight: bold;
+    color: #6B4EE2;
+}
+.contacto-item a {
+    font-weight: bold;
+    color: #36304e;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .contacto-contenido {
+        flex-direction: column;
+    }
+    .grid-contacto {
+        grid-template-columns: 1fr;
+    }
+}
