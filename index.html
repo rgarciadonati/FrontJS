@@ -8,37 +8,53 @@
     <!-- Autor: Romina Garcia Donati -->
 </head>
 <body id="top">
+<!-- Encabezado con logo centrado y navegación debajo -->
+<header class="header">
+    <div class="header-logo">
+        <a href="./index.html"><img src="images/logo-tienda.png" alt="Logo" class="logo"></a>
+    </div>
 
-    <!-- Encabezado con logo centrado y navegación debajo -->
-    <header class="header">
-        <div class="header-logo">
-            <a href="./index.html"><img src="images/logo-tienda.png" alt="Logo" class="logo"></a>
+    <nav class="header-nav">
+        <ul>
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./productos.html">Productos</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <div class="header-icons">
+        <!-- Icono de cuenta -->
+        <i class="fas fa-user"></i>
+
+        <!-- Icono de carrito -->
+        <i id="carrito-icono" class="fas fa-shopping-cart"></i>
+        <span id="carrito-contador" style="display:none;">0</span> <!-- Muestra la cantidad de productos -->
+    </div>
+
+    <!-- Carrito desplegable -->
+    <div id="carrito-desplegable" class="carrito-desplegable" style="display: none;">
+        <div class="carrito-header">
+            <h3>Tu Carrito</h3>
+            <button id="close-cart" class="close-cart">&times;</button>
+        </div>
+    
+        <div id="lista-carrito" class="lista-carrito">
+            <!-- Los productos del carrito aparecerán aquí -->
+        </div>
+    
+        <div class="carrito-footer">
+            <p>Total: $<span id="total-price">0.00</span></p>
+            <div class="botones-carrito">
+                <button id="vaciar-carrito">Vaciar Carrito</button>
+                <button id="finalizar-compra">Finalizar Compra</button>
+            </div>
         </div>
         
-        <nav class="header-nav">
-            <ul>
-                <li><a href="./index.html">Inicio</a></li>
-                <li><a href="./productos.html">Productos</a></li>
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-        
-        <div class="header-icons">
-            <i class="fas fa-user"></i>
-           <!-- Ícono del carrito -->
-<i class="fas fa-shopping-cart" id="carrito-icono"></i>
-<span id="carrito-contador" style="display: none;">0</span> <!-- Contador de productos -->
+    </div>
+    
+</header>
 
-<!-- Carrito desplegable -->
-<div id="carrito-desplegable" style="display: none;">
-  <ul id="lista-carrito"></ul>
-  <button id="vaciar-carrito">Vaciar Carrito</button>
-</div>
-
-        </div>
-        
-    </header>
     
     <!-- Contenido principal -->
     <main>
@@ -56,17 +72,17 @@
                 <!-- Cada card de producto -->
                 <div class="producto-card">
                     <div class="descuento">-10%</div>
-                    <img src="images/prod/alimentos/vitalcan/Vital-Therapy-Obesity-Cat.jpg" alt="Vital Therapy Obesity Cat">
+                    <img src="images/prod/alimentos/vitalcan/Vital-Therapy-Obesity-Cat.jpg"  class="producto-imagen" alt="Vital Therapy Obesity Cat">
                     <h3 class="producto-nombre">Vital Therapy Obesity Cat 2 Kg</h3>
                     <p class="marca">Therapy, Vital Can</p>
                     <p class="precio-anterior">$16,815.00</p>
                     <p class="precio-nuevo">$15,133.50</p>
-                    <button class="btn-agregar">Añadir Al Carrito</button>
+                    <button class="btn-agregar">Agregar al carrito</button>
                 </div>
         
                 <div class="producto-card">
                     <div class="descuento">-10%</div>
-                    <img src="images/prod/alimentos/royalcanin/rc-pouch-urinary-cat.jpg" alt="Royal Canin Pouch Urinary">
+                    <img src="images/prod/alimentos/royalcanin/rc-pouch-urinary-cat.jpg"  class="producto-imagen" alt="Royal Canin Pouch Urinary">
                     <h3 class="producto-nombre">Royal Canin Pouch Urinary S/O - 85 Gr</h3>
                     <p class="marca">Royal Canin</p>
                     <p class="precio-anterior">$2,730,00</p>
@@ -76,7 +92,7 @@
         
                 <div class="producto-card">
                     <div class="descuento">-8%</div>
-                    <img src="images/prod/alimentos/royalcanin/satiety-canine-seco.jpg" alt="Royal Canin Satiety Support Dog">
+                    <img src="images/prod/alimentos/royalcanin/satiety-canine-seco.jpg"  class="producto-imagen" alt="Royal Canin Satiety Support Dog">
                     <h3 class="producto-nombre">Royal Canin Satiety Support Dog - 20 Kg</h3>
                     <p class="marca">Royal Canin</p>
                     <p class="precio-anterior">$58.035,00</p>
@@ -86,7 +102,7 @@
         
                 <div class="producto-card">
                     <div class="descuento">-8%</div>
-                    <img src="images/prod/alimentos/vitalcan/balanced-perro-envase-control-peso.jpg" alt="Vital Balanced Adulto Control Peso">
+                    <img src="images/prod/alimentos/vitalcan/balanced-perro-envase-control-peso.jpg"  class="producto-imagen" alt="Vital Balanced Adulto Control Peso">
                     <h3 class="producto-nombre">Vital Balanced Adulto Control Peso</h3>
                     <p class="marca">Royal Canin</p>
                     <p class="precio-anterior">$14.820,00</p>
@@ -130,6 +146,6 @@
     </a>
         <!-- Llamada al script. -->
 
-        <script src="js/script.js"></script>
+        <script src="js/carrito.js"></script>
 </body>
 </html>

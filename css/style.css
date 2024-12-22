@@ -28,44 +28,93 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 15px 30px;
     background: rgb(2,0,36);
     background: linear-gradient(135deg, #ED1D90, #6B4EE2);
 
     color: #FFFFFF;
 }
-/* Carrito */
-.carrito-contador {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: red;
-    color: white;
-    font-size: 0.9rem;
-    border-radius: 50%;
-    padding: 5px;
-    display: none; /* Lo mostramos cuando haya productos */
-}
-
-.carrito-desplegable {
-    display: none;
-    position: absolute;
-    top: 50px;
-    right: 0;
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 20px;
-    width: 300px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#vaciar-carrito {
-    background-color: red;
-    color: white;
+/* Estilo general del carrito */
+.carrito-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 10px;
-    border: none;
-    margin-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
 }
+
+.carrito-item .carrito-item-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.carrito-item .carrito-item-imagen {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.carrito-item .carrito-item-detalles {
+    display: flex;
+    flex-direction: column;
+}
+
+.carrito-item .carrito-item-precio {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.carrito-item .carrito-item-cantidad input {
+    width: 40px;
+    text-align: center;
+}
+.carrito-item-cantidad  {
+    max-width: 60px;
+    margin-left: 10px;
+}
+
+/* Estilo para el contenedor de los botones del carrito */
+.carrito-footer {
+    display: flex;
+    flex-direction: column; /* Organiza los items de arriba hacia abajo */
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px;
+    margin-top: auto; /* Asegura que los botones queden al fondo */
+    position: relative;
+}
+
+.botones-carrito {
+    margin-top: 15px; /* Asegura que haya espacio entre el total y los botones */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.botones-carrito button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50; /* Color verde para los botones */
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.botones-carrito button:hover {
+    background-color: #45a049;
+}
+
+.botones-carrito button:active {
+    background-color: #3e8e41;
+}
+#total-price {
+    font-weight: bold;
+}
+
 
 /* Logo */
 .header-logo .logo {
@@ -75,7 +124,7 @@ a {
 /* Navegación */
 .header-nav ul {
     display: flex;
-    gap: 1.5rem;
+    gap: 20px;
     list-style: none;
 }
 
@@ -92,12 +141,13 @@ a {
 /* Íconos */
 .header-icons {
     display: flex;
-    gap: 1rem;
-    font-size: 1.2rem;
+    gap: 20px;
+    align-items: center;
 }
 
 .header-icons i {
-    cursor: pointer;
+    font-size: 20px;
+    color: white;
 }
 
 
@@ -347,6 +397,12 @@ footer ul li a {
     .producto-card {
         width: calc(33.33% - 1rem); /* 3 cards por fila */
     }
+    .carrito-item {
+        font-size: 1rem; /* Tamaño de fuente medio */
+    }
+    .carrito-item-contenedor {
+        gap: 15px; /* Agregar más espacio en pantallas medianas */
+    }
 }
 /* Media queries para dispositivos móviles */
 @media (max-width: 768px) {
@@ -386,6 +442,30 @@ footer ul li a {
             justify-content: center; /* Centra los íconos */
             font-size: 1.5rem;
         }
+        .carrito-item {
+            flex-direction: column; /* Apilar los elementos uno debajo del otro */
+            align-items: flex-start; /* Alinear al principio */
+        }
+    
+        .carrito-item-contenedor {
+            flex-direction: column; /* Apilar imagen, precio y nombre verticalmente */
+            align-items: flex-start;
+            gap: 5px; /* Reducir el espacio entre los elementos */
+        }
+    
+        .carrito-item-precio, .carrito-item h4 {
+            font-size: 0.9rem; /* Reducir el tamaño de fuente para mejor ajuste */
+        }
+    
+        .carrito-item button {
+            width: 100%; /* Hacer que el botón ocupe el ancho completo */
+            margin-left: 0; /* Eliminar margen */
+            margin-top: 10px; /* Agregar espacio arriba del botón */
+        }
+    
+        #total-price {
+            font-size: 1em; /* Ajustar tamaño del total */
+        }
 
     .hero {
         padding: 0 1rem;
@@ -421,6 +501,13 @@ footer ul li a {
         width: 40px;
         height: 40px;
         font-size: 1.2rem;
+    }
+    .cart {
+        width: 100%;
+    }
+
+    .cart-item img {
+        width: 40px;
     }
 }
 
