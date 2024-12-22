@@ -1,0 +1,423 @@
+/* Importar Font Awesome */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+
+/* Importar las fuentes de Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+/* Fuentes y colores */
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #e7f5ff;
+}
+
+h1, h2, h3 {
+    color: #ED1D90;
+}
+
+
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* Estilos del encabezado */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: rgb(2,0,36);
+    background: linear-gradient(135deg, #ED1D90, #6B4EE2);
+
+    color: #FFFFFF;
+}
+
+/* Logo */
+.header-logo .logo {
+    width: 120px;
+}
+
+/* Navegación */
+.header-nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.header-nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.header-nav a:hover {
+    color: #ED1D90;
+}
+
+/* Íconos */
+.header-icons {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.2rem;
+}
+
+.header-icons i {
+    cursor: pointer;
+}
+
+
+/* Barra de navegación */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem;
+    margin: 1rem 0 0;
+}
+
+nav ul li a {
+    color: #ED1D90;
+    padding: 0.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #6B4EE2;
+}
+
+/* Estilos para la sección hero */
+.hero {
+    position: relative;
+    max-height: 600px;
+    background-size: cover;
+    background-attachment: fixed; /* Efecto de parallax */
+    background-position: top center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 0 2rem;
+}
+#hero-home {
+    height: 60vh;
+    background-image: url('../images/slider-principal.jpg');
+}
+
+#hero-productos {
+    height: 40vh; /* Otra altura para vista productos */
+    background-image: url('../images/slider-productos.jpg'); /* Otra imagen para vista productos */
+}
+#hero-contacto {
+    height: 40vh; /* Otra altura para vista contacto */
+    background: rgb(255,255,255);
+    background: linear-gradient(166deg, rgba(255,255,255,1) 0%, rgba(254,230,243,1) 50%, rgba(249,249,249,1) 100%); 
+}
+
+.hero-content {
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+    color: #040473;
+}
+
+.hero-button {
+    padding: 0.75rem 1.5rem;
+    background-color: #ED1D90;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #6B4EE2;
+}
+
+/* Sección de productos con flex */
+.productos {
+    padding: 2rem;
+    text-align: center;
+}
+
+.producto-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Cada card de producto */
+.producto-card {
+    background-color: #FFFFFF;
+    color: #6B4EE2;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(20% - 0.8rem); /* 4 cards por fila */
+}
+
+/* Badge de descuento */
+.descuento {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ED1D90;
+    color: #FFFFFF;
+    padding: 0.3rem 0.6rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Imagen del producto */
+.producto-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+/* Nombre del producto */
+.producto-card h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+/* Marca */
+.marca {
+    font-size: 0.9rem;
+    color: #777777;
+}
+.precio {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+/* Precio anterior (tachado) */
+.precio-anterior {
+    font-size: 0.9rem;
+    color: #888888;
+    text-decoration: line-through;
+    margin: 0.5rem 0;
+}
+
+/* Precio nuevo */
+.precio-nuevo {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ED1D90;
+    margin: 0.5rem 0;
+}
+
+/* Botón de añadir al carrito */
+.producto-card button {
+    background-color: #ED1D90;
+    color: #FFFFFF;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.producto-card button:hover {
+    background-color: #6B4EE2;
+}
+.producto-card a {
+    color:  #ED1D90;
+    text-decoration: none;
+}
+.producto-card a:hover {
+    color:  #6B4EE2;
+    text-decoration: none;
+}
+
+/* Pie de página */
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 2rem;
+    color: #FFFFFF;
+}
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+.footer-col {
+    text-align: center;
+}
+
+.social-icons a {
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ED1D90;
+}
+.footer-logo {
+ max-width: 100px;
+
+}
+.scroll-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    background-color: #ED1D90;
+    color: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-to-top:hover {
+    background-color: #6B4EE2;
+}
+/* Responsividad */
+@media (max-width: 1024px) {
+    .producto-card {
+        width: calc(33.33% - 1rem); /* 3 cards por fila */
+    }
+}
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+        /* Cambiar dirección de header a columna */
+        .header {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        /* Alinear logo, nav e íconos al centro */
+        .header-logo,
+        .header-nav,
+        .header-icons {
+            text-align: center;
+            width: 100%;
+        }
+    
+        /* Cambiar nav a columna en móvil */
+        .header-nav ul {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        /* Ajustar tamaño del logo */
+        .header-logo .logo {
+            width: 100px;
+        }
+        
+        /* Centrar íconos en la versión móvil */
+        .header-icons {
+            justify-content: center; /* Centra los íconos */
+            font-size: 1.5rem;
+        }
+
+    .hero {
+        padding: 0 1rem;
+    }
+    #hero-home {
+        max-height: 40vh;
+    }
+    
+    #hero-productos {
+        max-height: 20vh;
+    }
+    #hero-contacto {
+        max-height: 20vh;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+    .producto-card {
+        width: calc(50% - 1rem); /* 2 cards por fila */
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    .scroll-to-top {
+        bottom: 1rem;
+        right: 1rem;
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .producto-card {
+        width: 100%; /* 1 card por fila */
+    }
+
+    nav ul {
+        gap: 0.5rem;
+    }
+    
+    .header-nav a {
+        font-size: 0.9rem;
+    }
+
+    /* Reducción adicional para el logo */
+    .header-logo .logo {
+        width: 80px;
+    }
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .hero-button {
+        padding: 0.5rem 1rem;
+    }
+}

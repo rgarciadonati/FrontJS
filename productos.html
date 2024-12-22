@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vista Productos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/vistaproductos.css">
+    <!-- Autor: Romina Garcia Donati -->
+</head>
+<body id="top">
+
+    <!-- Encabezado con logo centrado y navegación debajo -->
+    <header class="header">
+        <div class="header-logo">
+            <a href="./index.html"><img src="images/logo-tienda.png" alt="Logo" class="logo"></a>
+        </div>
+        
+        <nav class="header-nav">
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./productos.html">Productos</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        
+        <div class="header-icons">
+            <i class="fas fa-user"></i>
+            <i class="fas fa-shopping-cart"></i>
+        </div>
+    </header>
+    
+    <!-- Contenido principal -->
+<main>
+    <!-- Hero para bienvenida | Aquí hay background del estilo parallax -->
+    <section id="hero-productos" class="hero">
+        <div class="hero-content">
+            <h1>Nuestros Productos</h1>
+            <p>Encuentra los mejores productos con ofertas exclusivas</p>
+        </div>
+    </section>
+
+    <!-- Sección de productos -->
+    <section id="productos" class="productos">
+        <div class="productos-layout">
+            <!-- Columna de filtros -->
+            <aside class="filtros">
+                <h2>Filtrar por:</h2>
+                <div class="filtro-categoria">
+                    <h3>Precio</h3>
+                    <input type="range" min="0" max="10000" value="5000" class="slider" id="precio">
+                </div>
+                <div class="filtro-categoria">
+                    <h3>Marca</h3>
+                    <label><input type="checkbox"> Royal Canin</label><br>
+                    <label><input type="checkbox"> Vital Can</label><br>
+                    <!-- Agrega más marcas aquí -->
+                </div>
+                <div class="filtro-categoria">
+                    <h3>Peso</h3>
+                    <label><input type="radio" name="peso"> 1 kg</label><br>
+                    <label><input type="radio" name="peso"> 3 kg</label><br>
+                    <label><input type="radio" name="peso"> 12 kg</label><br>
+                    <!-- Agrega más opciones de peso aquí -->
+                </div>
+                <div class="filtro-categoria">
+                    <h3>Categoría</h3>
+                    <label><input type="checkbox"> Alimentos</label><br>
+                    <label><input type="checkbox"> Juguetes</label><br>
+                    <!-- Agrega más categorías aquí -->
+                </div>
+            </aside>
+
+            <!-- Columna de productos -->
+            <div class="producto-flex">
+                <!-- Cada card de producto -->
+                <!-- Cada card de producto -->
+                <div class="producto-card">
+                    <div class="descuento">-10%</div>
+                    <img src="images/prod/alimentos/vitalcan/Vital-Therapy-Obesity-Cat.jpg" alt="Vital Therapy Obesity Cat">
+                    <h3>Vital Therapy Obesity Cat 2 Kg</h3>
+                    <p class="marca">Therapy, Vital Can</p>
+                    <p class="precio-anterior">$16,815.00</p>
+                    <p class="precio-nuevo">$15,133.50</p>
+                    <button>Añadir Al Carrito</button>
+                </div>
+
+                <div class="producto-card">
+                    <div class="descuento">-10%</div>
+                    <img src="images/prod/alimentos/royalcanin/rc-pouch-urinary-cat.jpg" alt="Royal Canin Pouch Urinary">
+                    <h3><a href="./detalle-producto.html">Royal Canin Pouch Urinary S/O - 85 Gr</a></h3>
+                    <p class="marca">Royal Canin</p>
+                    <p class="precio-anterior">$2.730,00</p>
+                    <p class="precio-nuevo">$2.457,00</p>
+                    <button>Añadir Al Carrito</button>
+                </div>
+                <div class="producto-card">
+                    <div class="descuento">-8%</div>
+                    <img src="images/prod/alimentos/royalcanin/satiety-canine-seco.jpg" alt="Royal Canin Satiety Support Dog">
+                    <h3>Royal Canin Satiety Support Dog - 20 Kg</h3>
+                    <p class="marca">Royal Canin</p>
+                    <p class="precio-anterior">$58.035,00</p>
+                    <p class="precio-nuevo">$53.392,20</p>
+                    <button>Añadir Al Carrito</button>
+                </div>
+                <div class="producto-card">
+                    <div class="descuento">-8%</div>
+                    <img src="images/prod/alimentos/vitalcan/balanced-perro-envase-control-peso.jpg" alt="Vital Balanced Adulto Control Peso">
+                    <h3>Vital Balanced Adulto Control Peso</h3>
+                    <p class="marca">Royal Canin</p>
+                    <p class="precio-anterior">$14.820,00</p>
+                    <p class="precio-nuevo">$13.338,00</p>
+                    <button>Añadir Al Carrito</button>
+                </div>
+                <div class="producto-card">
+                    <div class="descuento">-8%</div>
+                    <img src="images/prod/alimentos/vitalcan/balanced-perro-envase-control-peso.jpg" alt="Vital Balanced Adulto Control Peso">
+                    <h3>Vital Balanced Adulto Control Peso</h3>
+                    <p class="marca">Royal Canin</p>
+                    <p class="precio-anterior">$14.820,00</p>
+                    <p class="precio-nuevo">$13.338,00</p>
+                    <button>Añadir Al Carrito</button>
+                </div>
+                <div class="producto-card">
+                    <div class="descuento">-8%</div>
+                    <img src="images/prod/alimentos/vitalcan/balanced-perro-envase-control-peso.jpg" alt="Vital Balanced Adulto Control Peso">
+                    <h3>Vital Balanced Adulto Control Peso</h3>
+                    <p class="marca">Royal Canin</p>
+                    <p class="precio-anterior">$14.820,00</p>
+                    <p class="precio-nuevo">$13.338,00</p>
+                    <button>Añadir Al Carrito</button>
+                </div>
+                <div class="producto-card">
+                    <div class="descuento">-8%</div>
+                    <img src="images/prod/alimentos/vitalcan/balanced-perro-envase-control-peso.jpg" alt="Vital Balanced Adulto Control Peso">
+                    <h3>Vital Balanced Adulto Control Peso</h3>
+                    <p class="marca">Royal Canin</p>
+                    <p class="precio-anterior">$14.820,00</p>
+                    <p class="precio-nuevo">$13.338,00</p>
+                    <button>Añadir Al Carrito</button>
+                </div>
+                <div class="producto-card">
+                    <div class="descuento">-8%</div>
+                    <img src="images/prod/alimentos/vitalcan/balanced-perro-envase-control-peso.jpg" alt="Vital Balanced Adulto Control Peso">
+                    <h3>Vital Balanced Adulto Control Peso</h3>
+                    <p class="marca">Royal Canin</p>
+                    <p class="precio-anterior">$14.820,00</p>
+                    <p class="precio-nuevo">$13.338,00</p>
+                    <button>Añadir Al Carrito</button>
+                </div>
+                <div class="producto-card">
+                    <div class="descuento">-8%</div>
+                    <img src="images/prod/alimentos/vitalcan/balanced-perro-envase-control-peso.jpg" alt="Vital Balanced Adulto Control Peso">
+                    <h3>Vital Balanced Adulto Control Peso</h3>
+                    <p class="marca">Royal Canin</p>
+                    <p class="precio-anterior">$14.820,00</p>
+                    <p class="precio-nuevo">$13.338,00</p>
+                    <button>Añadir Al Carrito</button>
+                </div>
+                <!-- Agregar más productos aquí según sea necesario -->
+            </div>
+        </div>
+    </section>
+</main>
+    <!-- Pie de página -->
+    <footer>
+        <div class="footer-col">
+            <img class="footer-logo" src="images/logo-tienda.png" alt="Tienda">
+            <h2>PetShop</h2>
+            <!-- Iconos de redes sociales -->
+            <div class="social-icons">
+                <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h3>Dirección y Horario</h3>
+            <p>Pres. Hipólito Yrigoyen 2074, Florida, Provincia de Buenos Aires</p>
+            <p>Paraná 2730, Olivos, Provincia de Buenos Aires</p>
+            <p>Lunes a Viernes: 9:00 - 18:00</p>
+        </div>
+        <div class="footer-col">
+            <h3>Enlaces</h3>
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./productos.html">Productos</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+        
+    </footer>
+    <!-- Botón de Scroll to Top. Por ahora únicamente con css. -->
+    <a href="#top" class="scroll-to-top" aria-label="Volver al inicio">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</body>
+</html>
