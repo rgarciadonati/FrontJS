@@ -34,6 +34,38 @@ a {
 
     color: #FFFFFF;
 }
+/* Carrito */
+.carrito-contador {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    color: white;
+    font-size: 0.9rem;
+    border-radius: 50%;
+    padding: 5px;
+    display: none; /* Lo mostramos cuando haya productos */
+}
+
+.carrito-desplegable {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#vaciar-carrito {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    margin-top: 10px;
+}
 
 /* Logo */
 .header-logo .logo {
