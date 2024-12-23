@@ -26,8 +26,33 @@
         </nav>
         
         <div class="header-icons">
+            <!-- Icono de cuenta -->
             <i class="fas fa-user"></i>
-            <i class="fas fa-shopping-cart"></i>
+    
+            <!-- Icono de carrito -->
+            <i id="carrito-icono" class="fas fa-shopping-cart"></i>
+            <span id="carrito-contador" style="display:none;">0</span> <!-- Muestra la cantidad de productos -->
+        </div>
+    
+        <!-- Carrito desplegable -->
+        <div id="carrito-desplegable" class="carrito-desplegable" style="display: none;">
+            <div class="carrito-header">
+                <h3>Tu Carrito</h3>
+                <button id="close-cart" class="close-cart">&times;</button>
+            </div>
+        
+            <div id="lista-carrito" class="lista-carrito">
+                <!-- Los productos del carrito aparecerán aquí -->
+            </div>
+        
+            <div class="carrito-footer">
+                <p>Total: $<span id="total-price">0.00</span></p>
+                <div class="botones-carrito">
+                    <button id="vaciar-carrito">Vaciar Carrito</button>
+                    <button id="finalizar-compra">Finalizar Compra</button>
+                </div>
+            </div>
+            
         </div>
     </header>
     
@@ -38,26 +63,24 @@
             <!-- Columna izquierda: Slider de imágenes -->
             <div class="producto-slider">
                 <div class="imagen-principal">
-                    <img src="images/prod/alimentos/royalcanin/rc-pouch-urinary-cat.jpg" alt="Royal Canin Pouch Urinary">
-                    <div class="descuento">-10%</div>
+                    <!-- La imagen y el alt se actualizarán dinámicamente -->
+                    <img src="" alt="Producto" />
                 </div>
             </div>
     
             <!-- Columna derecha: Información del producto -->
             <div class="product-info">
-                <!-- Breadcrumb -->
-                <div class="breadcrumb">
-                  <a href="./index.html">Inicio</a> &gt; 
-                  <a href="#">Gatos</a> &gt; 
-                  <a href="#">Alimentos húmedos</a> &gt; 
-                  <span>Royal Canin Pouch Urinary S/O - 85 Gr</span>
+                 <!-- Breadcrumb -->
+                 <div class="breadcrumb">
+                    <a href="./index.html">Inicio</a> &gt; 
+                    <a href="#">Categoría</a> &gt; 
+                    <span>Producto</span>
                 </div>
               
                 <!-- Título y Precio -->
-                <h1>Royal Canin Pouch Urinary S/O - 85 Gr</h1>
+                <h1></h1>
                 <div class="precio">
-                    <p class="precio-anterior">$2.730,00</p>
-                    <p class="precio-nuevo">$2.457,00</p>
+                    <p class="precio"></p>
                 </div>
               
                 <!-- Mensaje de pago -->
@@ -68,19 +91,20 @@
                   <span class="in-stock">✔ Hay existencias</span>
                 </div>
               
-                <!-- Selector de cantidad y botón de agregar al carrito -->
+                <!-- Selector de cantidad -->
                 <div class="quantity-selector">
-                  <label for="quantity">Cantidad:</label>
-                  <button class="quantity-btn">-</button>
-                  <input type="number" id="quantity" value="1" min="1">
-                  <button class="quantity-btn">+</button>
+                    <label for="quantity">Cantidad:</label>
+                    <button class="quantity-btn">-</button>
+                    <input type="number" id="quantity" value="1" min="1">
+                    <button class="quantity-btn">+</button>
                 </div>
-                <button class="btn-comprar">Añadir Al Carrito</button>
+                
+                <button class="btn-comprar">Añadir al Carrito</button>
               
                 <!-- Información adicional -->
                 <div class="extra-info">
-                  <div class="sku">SKU: 10563</div>
-                  <div class="categories">Categorías: Alimentos húmedos, Descuentos, Gatos, Oferta Pouch Royal Canin, Ofertas</div>
+                    <div class="sku">SKU:</div>
+                    <div class="categories">Categorías:</div>
                 </div>
               </div>
         </div>
@@ -88,18 +112,12 @@
             <div class="accordion">
                 <!-- Descripción del Producto -->
                 <div class="accordion-item">
-                <input type="radio" id="tab1" name="accordion" checked>
-                <label for="tab1">Descripción del Producto</label>
-                <div class="content">
-                    <h2>ROYAL CANIN POUCH URINARY S/O 85 Gr</h2>
-                    <p>Alimento húmedo para gatos adultos, formulado para ayudar a disolver cálculos de estruvita y contribuir a reducir su recurrencia a través de sus propiedades acidificantes de la orina.</p>
-                    <h3>Cistitis idiopática</h3>
-                    <p>Su alto contenido de humedad contribuye a la dilución de la orina, razón por la cual la dieta húmeda es de preferencia en casos de cistitis idiopática.</p>
-                    <h3>Disolución de estruvita</h3>
-                    <p>Ayuda a disolver los cálculos de estruvita.</p>
-                    <h3>Dilución urinaria</h3>
-                    <p>Ayuda a generar una orina más diluida que resulta desfavorable para la formación de cálculos urinarios. Además, un mayor volumen urinario genera un efecto de "lavado" de la vejiga.</p>
-                </div>
+                    <input type="radio" id="tab1" name="accordion" checked>
+                    <label for="tab1">Descripción del Producto</label>
+                    <div class="content">
+                        <h2>Descripción</h2>
+                        <p>Información del producto.</p>
+                    </div>
                 </div>
             
                 <!-- Video de YouTube -->
@@ -199,5 +217,8 @@
     <a href="#top" class="scroll-to-top" aria-label="Volver al inicio">
         <i class="fas fa-arrow-up"></i>
     </a>
+      <!-- Llamada al script. -->
+
+      <script src="js/carrito.js"></script>
 </body>
 </html>
