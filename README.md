@@ -1,6 +1,6 @@
 # FrontJS
 Trabajo para FRONT_TT_2C2024
-Proyecto HTML Básico | Pre - Entrega de Proyecto
+Proyecto HTML Básico + Utilización de js | Entrega final de Proyecto
 
 Descripción
 
